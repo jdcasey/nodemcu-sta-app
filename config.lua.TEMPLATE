@@ -1,0 +1,18 @@
+local module = {}
+module.RUN=false
+-- Framework will cycle through the available APs,
+-- trying to configure each by looking up by SSID here.
+
+module.SSID = {}
+
+module.SSID.mywifi = {}
+module.SSID.mywifi.password = "mypass"
+module.SSID.mywifi.mode = "n"          -- 802.11n, the default
+--module.SSID.mywifi.mode = "b"        -- 802.11b
+--module.SSID.mywifi.mode = "g"        -- 802.11g
+
+module.SSID["SSID With Spaces"] = {}
+module.SSID["SSID With Spaces"]["mode"] = "n"
+-- NOTE: No password on this one! It's open.
+
+return module
